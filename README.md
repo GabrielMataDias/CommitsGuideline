@@ -1,49 +1,55 @@
+# Guia de Commits para Projetos .NET
 
-# Commit Message Guidelines for .NET Projects
+## Visão Geral
+Este documento descreve o padrão de mensagens de commit utilizado em nossos projetos .NET. Seguir estas diretrizes ajuda na colaboração, na rastreabilidade das mudanças e na manutenção de um histórico limpo.
 
-## Overview
-This document outlines the standardized commit message format for our .NET projects. Adhering to these guidelines facilitates clear communication, efficient project management, and a professional workflow in our development process.
+## Tipos de Commit
+- `feat`: nova funcionalidade.
+- `fix`: correção de bug.
+- `docs`: documentação.
+- `test`: testes unitários.
+- `build`: ajustes de build e dependências.
+- `perf`: melhoria de performance.
+- `style`: formatação ou padronização de estilo (sem alteração de código).
+- `refactor`: refatoração que não corrige bug nem adiciona recurso.
+- `chore`: tarefas rotineiras como atualização de dependências.
+- `ci`: alterações em pipelines de integração contínua.
+- `raw`: arquivos de configuração ou dados.
 
-## Commit Types
-- `feat`: Introduces a new feature or functionality.
-- `fix`: Addresses a bug or issue in the existing code.
-- `docs`: Changes related to documentation, including README updates.
-- `test`: Modifications or additions to unit tests.
-- `build`: Changes affecting build files and dependencies.
-- `perf`: Code alterations to improve performance.
-- `style`: Code style updates (formatting, missing semi-colons, etc.).
-- `refactor`: Code changes that neither fix a bug nor add a feature.
-- `chore`: Routine tasks or updates (e.g., package management).
-- `ci`: Modifications related to continuous integration setup.
-- `raw`: Changes involving configuration files, data files, parameters.
+## Estrutura da Mensagem
+### Título
+- Resuma a mudança em até 50 caracteres.
+- Use o tipo de commit seguido de dois pontos.
+- Escreva no imperativo, por exemplo: `feat: adicionar tela de login`.
 
-## Message Structure
-### Title
-- The title should be concise yet descriptive.
-- Begin with the type of commit, followed by a colon and a brief description.
-- Use imperative mood in the title.
+### Corpo
+- Detalhe o que foi feito e o motivo.
+- Quebre em linhas de até 72 caracteres.
+- Utilize marcadores para múltiplos itens.
+- Referencie IDs de tarefa ou issues.
 
-### Body
-- Provide a detailed explanation of the changes.
-- Use bullet points for multiple changes.
-- Reference related task IDs or issue numbers.
+### Rodapé
+- Adicione metadados como `Reviewed-by` ou `BREAKING CHANGE`.
+- Inclua links para tarefas (Jira, Trello etc.).
 
-### Footer
-- Include additional metadata such as `Reviewed-by` and task references (e.g., Trello or Jira IDs).
+## Exemplo
+```text
+feat: implementar autenticação
 
-## Examples
-- `git commit -m "feat: Implement user authentication system"`
-- `git commit -m "fix: Resolve null reference exception in DataService"`
-- `git commit -m "docs: Update README with new API documentation"`
-- `git commit -m "perf: Optimize query performance in ReportGenerator"`
-- `git commit -m "refactor: Refactor User class for better readability"`
+- cria endpoint /login
+- ajusta validação de usuário
+- adiciona testes de autenticação
 
-## Best Practices
-- Keep commits atomic: Each commit should represent a single logical change.
-- Write clear and meaningful commit messages.
-- Avoid generic messages like 'fix bug' or 'update file'.
-- Review commits for clarity and relevance before pushing.
+Reviewed-by: Maria Silva
+Refs: TRELLO-123
+```
+
+## Melhores Práticas
+- Mantenha os commits pequenos e focados.
+- Revise a mensagem antes de enviar.
+- Evite descrições genéricas como "update" ou "fix bug".
+- Prefira escrever as mensagens em inglês quando o projeto for internacional.
 
 ---
 
-*Commit with purpose, clarity, and professionalism.*
+*Commite com propósito, clareza e profissionalismo.*
